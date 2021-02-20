@@ -4,6 +4,7 @@
 	"description": "Display workspace name in the statusbar",
 	"version": "1.0.0",
 	"publisher": "koalamer",
+	"repository": "https://github.com/koalamer/vsc-workspace-in-status-bar.git",
 	"engines": {
 		"vscode": "^1.53.0"
 	},
