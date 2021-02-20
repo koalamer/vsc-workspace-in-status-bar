@@ -12,3 +12,5 @@ At some point did this:
 Package was generated with:
 
     vsce package
+
+Complete publish instructions can be found [here](https://code.visualstudio.com/api/working-with-extensions/publishing-extension).
