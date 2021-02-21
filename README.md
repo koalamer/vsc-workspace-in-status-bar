@@ -2,6 +2,10 @@
 
 A simple extension that displays the workspace name in the status bar.
 
+The problem it tries to solve is that in full screen mode the workspace name
+does not have a constant place on the UI. Only the Explorer panel displays the
+workspace name, and that panel is not constantly visible.
+
 ## Features
 
 Settings are available to customize label placement and appearance.
