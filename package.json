@@ -2,7 +2,7 @@
 	"name": "workspace-in-status-bar",
 	"displayName": "Workspace Name in Status Bar",
 	"description": "Display workspace name in the statusbar",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "koalamer",
 	"repository": "https://github.com/koalamer/vsc-workspace-in-status-bar.git",
 	"engines": {
