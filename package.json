@@ -7,7 +7,7 @@
 	"icon": "images/ws-in-sb-logo.png",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/koalamer/vsc-workspace-in-status-bar.git",
+		"url": "https://github.com/koalamer/vsc-workspace-in-status-bar.git"
 	},
 	"engines": {
 		"vscode": "^1.53.0"
