@@ -15,8 +15,9 @@ function updateLabelProperties() {
 	let tooltip: string = "Current Workspace";
 	let command: string = "workbench.view.explorer";
 	let color: vscode.ThemeColor = new vscode.ThemeColor("workspaceInStatusBar.text");
-	let displayFolderIcon: boolean = false;
-	let uppercaseName: boolean = true;
+	let displayFolderIcon: boolean = true;
+	let uppercaseName: boolean = false;
+	let removeWorkspacePostfix: boolean = true;
 
 	let config = vscode.workspace.getConfiguration("workspaceInStatusBar");
 
@@ -39,12 +40,29 @@ function updateLabelProperties() {
 		uppercaseName = config.get("uppercase") || false;
 	}
 
+	if (config.has("removeWorkspacePostfix")) {
+		removeWorkspacePostfix = config.get("removeWorkspacePostfix") || false;
+	}
+
+	let workspacePostfix = " (Workspace)";
+	let isWorkspace = text.endsWith(workspacePostfix);
+
+	if (removeWorkspacePostfix) {
+		if (isWorkspace) {
+			text = text.substr(0, text.length - workspacePostfix.length);
+		}
+	}
+
 	if (uppercaseName) {
 		text = text.toLocaleUpperCase();
 	}
 
 	if (displayFolderIcon) {
-		text = "🖿 " + text;
+		if (isWorkspace) {
+			text = "$(folder-active) " + text;
+		} else {
+			text = "$(folder) " + text;
+		}
 	}
 
 	if (typeof statusBarWorkspaceLabel !== "undefined") {

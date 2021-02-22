@@ -18,6 +18,7 @@ This extension contributes the following settings:
 * `workspaceInStatusBar.priority`: alignment priority, greater number means more to the left
 * `workspaceInStatusBar.displayFolderIcon`: controls whether to display an icon next to the label text
 * `workspaceInStatusBar.uppercase`: makes the workspace name uppercase
+* `workspaceInStatusBar.removeWorkspacePostfix`: remove the '(Workspace)' string from the end of workspace names
 
 To set the color of the label, use:
 

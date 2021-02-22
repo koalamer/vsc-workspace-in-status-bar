@@ -37,13 +37,18 @@
 				},
 				"workspaceInStatusBar.displayFolderIcon": {
 					"type": "boolean",
-					"default": false,
+					"default": true,
 					"description": "Display a folder icon in front of the workspace name."
 				},
 				"workspaceInStatusBar.uppercase": {
 					"type": "boolean",
-					"default": true,
+					"default": false,
 					"description": "Make the workspace name uppercase."
+				},
+				"workspaceInStatusBar.removeWorkspacePostfix": {
+					"type": "boolean",
+					"default": true,
+					"description": "Remove the '(Workspace)' string from the end of workspace names."
 				}
 			}
 		},
