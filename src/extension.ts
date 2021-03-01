@@ -6,6 +6,12 @@ export function activate(context: vscode.ExtensionContext) {
 	updateLabelProperties();
 	context.subscriptions.push(statusBarWorkspaceLabel);
 	context.subscriptions.push(vscode.workspace.onDidChangeConfiguration(updateLabelProperties));
+
+	context.subscriptions.push(vscode.commands.registerCommand("workspaceInStatusBar.click", () => {
+		vscode.commands.executeCommand("workbench.view.explorer");
+		vscode.commands.executeCommand("workbench.files.action.collapseExplorerFolders");
+	}));
+
 }
 
 function updateLabelProperties() {
@@ -13,7 +19,7 @@ function updateLabelProperties() {
 	let priority: number = 99999;
 	let text: string = vscode.workspace.name || "";
 	let tooltip: string = "Current Workspace";
-	let command: string = "workbench.view.explorer";
+	let command: string = "workspaceInStatusBar.click";
 	let color: vscode.ThemeColor = new vscode.ThemeColor("workspaceInStatusBar.text");
 	let displayFolderIcon: boolean = true;
 	let uppercaseName: boolean = false;

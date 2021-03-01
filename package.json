@@ -2,7 +2,7 @@
 	"name": "workspace-in-status-bar",
 	"displayName": "Workspace Name in Status Bar",
 	"description": "Display workspace name in the statusbar",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"publisher": "koalamer",
 	"icon": "images/ws-in-sb-logo.png",
 	"repository": {
@@ -20,7 +20,12 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [],
+		"commands": [
+			{
+				"command": "workspaceInStatusBar.click",
+				"title": "Show Workspace"
+			}
+		],
 		"configuration": {
 			"title": "Workspace in Status Bar",
 			"properties": {
