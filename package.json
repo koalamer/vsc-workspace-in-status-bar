@@ -23,7 +23,7 @@
 		"commands": [
 			{
 				"command": "workspaceInStatusBar.click",
-				"title": "Show Workspace"
+				"title": "workspaceInStatusBar.click"
 			}
 		],
 		"configuration": {
