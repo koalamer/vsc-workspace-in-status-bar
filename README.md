@@ -10,6 +10,8 @@ workspace name, and that panel is not constantly visible.
 
 Settings are available to customize label placement and appearance.
 
+When you click the label, the explorer view is opened with collapsed folders.
+
 ## Extension Settings
 
 This extension contributes the following settings:
