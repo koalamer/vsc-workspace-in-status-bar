@@ -4,6 +4,6 @@ All notable changes to the "status-bar-workspace-name" extension will be documen
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
+## [1.0.5] - 2022-07-12
 
-- Initial release
+- Removed default color. See readme for workaround.

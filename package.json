@@ -2,7 +2,7 @@
 	"name": "workspace-in-status-bar",
 	"displayName": "Workspace Name in Status Bar",
 	"description": "Display workspace name in the statusbar",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"publisher": "koalamer",
 	"icon": "images/ws-in-sb-logo.png",
 	"repository": {
@@ -71,9 +71,9 @@
 				"id": "workspaceInStatusBar.text",
 				"description": "Color for the label in the status bar.",
 				"defaults": {
-					"dark": "statusBarItem.errorForeground",
-					"light": "statusBarItem.errorForeground",
-					"highContrast": "statusBarItem.errorForeground"
+					"dark": "statusBar.foreground",
+					"light": "statusBar.foreground",
+					"highContrast": "statusBar.foreground"
 				}
 			}
 		]
@@ -95,7 +95,7 @@
 		"@typescript-eslint/parser": "^4.14.1",
 		"eslint": "^7.19.0",
 		"glob": "^7.1.6",
-		"mocha": "^8.2.1",
+		"mocha": "^10.0.0",
 		"typescript": "^4.1.3",
 		"vscode-test": "^1.5.0"
 	}

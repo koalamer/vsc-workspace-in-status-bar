@@ -27,3 +27,13 @@ To set the color of the label, use:
 * `workspaceInStatusBar.text`
 
 in your color customization settings.
+
+In the settings JSON you can set this color globally but you can also target a specific theme by putting it into a correctly named entry like this:
+
+```
+"workbench.colorCustomizations": {
+    "[Monokai]": {
+      "workspaceInStatusBar.text": "#7cd5f1"`
+    }
+}
+```
