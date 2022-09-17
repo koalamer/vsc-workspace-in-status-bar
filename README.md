@@ -21,6 +21,7 @@ This extension contributes the following settings:
 * `workspaceInStatusBar.displayFolderIcon`: controls whether to display an icon next to the label text
 * `workspaceInStatusBar.uppercase`: makes the workspace name uppercase
 * `workspaceInStatusBar.removeWorkspacePostfix`: remove the '(Workspace)' string from the end of workspace names
+* `workspaceInStatusBar.clickCommand`: what command to execute when the status bar label is clicked
 
 To set the color of the label, use:
 

@@ -67,7 +67,7 @@
 				"workspaceInStatusBar.clickCommand": {
 					"type": "string",
 					"default": "workspaceInStatusBar.click",
-					"description": "Command that is fired on click of the workspace name."
+					"description": "Command fired when clicking the status bar label."
 				}
 			}
 		},
