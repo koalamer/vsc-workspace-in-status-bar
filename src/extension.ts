@@ -50,6 +50,10 @@ function updateLabelProperties() {
 		removeWorkspacePostfix = config.get("removeWorkspacePostfix") || false;
 	}
 
+	if(config.has("clickCommand")){
+		command = config.get("clickCommand") || command;
+	}
+
 	let workspacePostfix = " (Workspace)";
 	let isWorkspace = text.endsWith(workspacePostfix);
 
