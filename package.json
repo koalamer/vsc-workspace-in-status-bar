@@ -1,107 +1,107 @@
 {
-  "name": "workspace-in-status-bar",
-  "displayName": "Workspace Name in Status Bar",
-  "description": "Display workspace name in the statusbar",
-  "version": "1.1.0",
-  "publisher": "koalamer",
-  "icon": "images/ws-in-sb-logo.png",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/koalamer/vsc-workspace-in-status-bar.git"
-  },
-  "engines": {
-    "vscode": "^1.53.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "*"
-  ],
-  "main": "./out/extension.js",
-  "capabilities": {
-    "untrustedWorkspaces": {
-      "supported": true
-    }
-  },
-  "contributes": {
-    "commands": [
-      {
-        "command": "workspaceInStatusBar.click",
-        "title": "workspaceInStatusBar.click"
-      }
-    ],
-    "configuration": {
-      "title": "Workspace in Status Bar",
-      "properties": {
-        "workspaceInStatusBar.alignment": {
-          "type": "string",
-          "default": "left",
-          "enum": [
-            "left",
-            "right"
-          ],
-          "description": "Where to alignt the label, left or right."
-        },
-        "workspaceInStatusBar.priority": {
-          "type": "number",
-          "default": 99999,
-          "minimum": 0,
-          "description": "Alignment priority, greater number means more to the left."
-        },
-        "workspaceInStatusBar.displayFolderIcon": {
-          "type": "boolean",
-          "default": true,
-          "description": "Display a folder icon in front of the workspace name."
-        },
-        "workspaceInStatusBar.uppercase": {
-          "type": "boolean",
-          "default": false,
-          "description": "Make the workspace name uppercase."
-        },
-        "workspaceInStatusBar.removeWorkspacePostfix": {
-          "type": "boolean",
-          "default": true,
-          "description": "Remove the '(Workspace)' string from the end of workspace names."
-        },
-        "workspaceInStatusBar.clickCommand": {
-          "type": "string",
-          "default": "workspaceInStatusBar.click",
-          "description": "Command that is fired on click of the workspace name."
-        }
-      }
-    },
-    "colors": [
-      {
-        "id": "workspaceInStatusBar.text",
-        "description": "Color for the label in the status bar.",
-        "defaults": {
-          "dark": "statusBar.foreground",
-          "light": "statusBar.foreground",
-          "highContrast": "statusBar.foreground"
-        }
-      }
-    ]
-  },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
-  },
-  "devDependencies": {
-    "@types/glob": "^7.1.3",
-    "@types/mocha": "^8.0.4",
-    "@types/node": "^12.11.7",
-    "@types/vscode": "^1.53.0",
-    "@typescript-eslint/eslint-plugin": "^4.14.1",
-    "@typescript-eslint/parser": "^4.14.1",
-    "eslint": "^7.19.0",
-    "glob": "^7.1.6",
-    "mocha": "^10.0.0",
-    "typescript": "^4.1.3",
-    "vscode-test": "^1.5.0"
-  }
+	"name": "workspace-in-status-bar",
+	"displayName": "Workspace Name in Status Bar",
+	"description": "Display workspace name in the statusbar",
+	"version": "1.1.0",
+	"publisher": "koalamer",
+	"icon": "images/ws-in-sb-logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/koalamer/vsc-workspace-in-status-bar.git"
+	},
+	"engines": {
+		"vscode": "^1.53.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": true
+		}
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "workspaceInStatusBar.click",
+				"title": "workspaceInStatusBar.click"
+			}
+		],
+		"configuration": {
+			"title": "Workspace in Status Bar",
+			"properties": {
+				"workspaceInStatusBar.alignment": {
+					"type": "string",
+					"default": "left",
+					"enum": [
+						"left",
+						"right"
+					],
+					"description": "Where to alignt the label, left or right."
+				},
+				"workspaceInStatusBar.priority": {
+					"type": "number",
+					"default": 99999,
+					"minimum": 0,
+					"description": "Alignment priority, greater number means more to the left."
+				},
+				"workspaceInStatusBar.displayFolderIcon": {
+					"type": "boolean",
+					"default": true,
+					"description": "Display a folder icon in front of the workspace name."
+				},
+				"workspaceInStatusBar.uppercase": {
+					"type": "boolean",
+					"default": false,
+					"description": "Make the workspace name uppercase."
+				},
+				"workspaceInStatusBar.removeWorkspacePostfix": {
+					"type": "boolean",
+					"default": true,
+					"description": "Remove the '(Workspace)' string from the end of workspace names."
+				},
+				"workspaceInStatusBar.clickCommand": {
+					"type": "string",
+					"default": "workspaceInStatusBar.click",
+					"description": "Command that is fired on click of the workspace name."
+				}
+			}
+		},
+		"colors": [
+			{
+				"id": "workspaceInStatusBar.text",
+				"description": "Color for the label in the status bar.",
+				"defaults": {
+					"dark": "statusBar.foreground",
+					"light": "statusBar.foreground",
+					"highContrast": "statusBar.foreground"
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.53.0",
+		"@typescript-eslint/eslint-plugin": "^4.14.1",
+		"@typescript-eslint/parser": "^4.14.1",
+		"eslint": "^7.19.0",
+		"glob": "^7.1.6",
+		"mocha": "^10.0.0",
+		"typescript": "^4.1.3",
+		"vscode-test": "^1.5.0"
+	}
 }

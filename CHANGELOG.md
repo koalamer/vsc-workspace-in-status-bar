@@ -6,7 +6,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [1.1.0] - 2022-08-21
 
-- Control what command fires on click of the workspace name
+- Control what command fires when clicking the status bar label
 
 ## [1.0.5] - 2022-07-12
 
