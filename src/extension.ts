@@ -16,7 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 function updateLabelProperties() {
 	let alignment: vscode.StatusBarAlignment = vscode.StatusBarAlignment.Left;
-	let priority: number = 99999;
+	let priority: number = 99999999999999999999;
 	let text: string = vscode.workspace.name || "";
 	let tooltip: string = "Current Workspace";
 	let command: string = "workspaceInStatusBar.click";
