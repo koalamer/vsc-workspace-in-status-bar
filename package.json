@@ -2,7 +2,7 @@
 	"name": "workspace-in-status-bar",
 	"displayName": "Workspace Name in Status Bar",
 	"description": "Display workspace name in the statusbar",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"publisher": "koalamer",
 	"icon": "images/ws-in-sb-logo.png",
 	"repository": {

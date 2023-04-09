@@ -54,21 +54,29 @@ function updateLabelProperties() {
 		command = config.get("clickCommand") || command;
 	}
 
-	const currentLocale: string = (vscode && vscode.env && vscode.env.language) ? vscode.env.language : "en";
-	const workspacePostfixes: {[index: string]: string} = {
-		de: " (Arbeitsbereich)",
-		en: " (Workspace)",
-		es: " (área de trabajo)",
-		fr: " (Espace de travail)",
-		it: " (Area di lavoro)"
-	};
-	
-	let workspacePostfix = workspacePostfixes[currentLocale] ? workspacePostfixes[currentLocale] : workspacePostfixes.en;
+	let currentLocale: string = (vscode && vscode.env && vscode.env.language) ? vscode.env.language : "en";
+	const workspacePostfixes = new Map<string, string>([
+		["cs", " (pracovní prostor)"],
+		["de", " (Arbeitsbereich)"],
+		["en", " (Workspace)"],
+		["es", " (área de trabajo)"],
+		["fr", " (Espace de travail)"],
+		["it", " (Area di lavoro)"],
+		["ja", " (ワークスペース)"],
+		["ko", " (작업 영역)"],
+		["pl", " (obszar roboczy)"],
+		["tr", " (Çalışma Alanı)"],
+	]);
+	if (!workspacePostfixes.has(currentLocale)) {
+		currentLocale = "en";
+	}
+
+	let workspacePostfix = workspacePostfixes.get(currentLocale) || "";
 	let isWorkspace = text.endsWith(workspacePostfix);
 
 	if (removeWorkspacePostfix) {
 		if (isWorkspace) {
-			text = text.substr(0, text.length - workspacePostfix.length);
+			text = text.slice(0, text.length - workspacePostfix.length);
 		}
 	}
 
