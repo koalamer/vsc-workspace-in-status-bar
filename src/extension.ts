@@ -54,7 +54,16 @@ function updateLabelProperties() {
 		command = config.get("clickCommand") || command;
 	}
 
-	let workspacePostfix = " (Workspace)";
+	const currentLocale: string = (vscode && vscode.env && vscode.env.language) ? vscode.env.language : "en";
+	const workspacePostfixes: {[index: string]: string} = {
+		de: " (Arbeitsbereich)",
+		en: " (Workspace)",
+		es: " (área de trabajo)",
+		fr: " (Espace de travail)",
+		it: " (Area di lavoro)"
+	};
+	
+	let workspacePostfix = workspacePostfixes[currentLocale] ? workspacePostfixes[currentLocale] : workspacePostfixes.en;
 	let isWorkspace = text.endsWith(workspacePostfix);
 
 	if (removeWorkspacePostfix) {
