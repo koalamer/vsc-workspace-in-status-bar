@@ -10,7 +10,7 @@
 		"url": "https://github.com/koalamer/vsc-workspace-in-status-bar.git"
 	},
 	"engines": {
-		"vscode": "^1.53.0"
+		"vscode": "^1.63.0"
 	},
 	"categories": [
 		"Other"
