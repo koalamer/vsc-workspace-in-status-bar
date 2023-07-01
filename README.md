@@ -23,6 +23,10 @@ This extension contributes the following settings:
 * `workspaceInStatusBar.removeWorkspacePostfix`: remove the '(Workspace)' string from the end of workspace names for a couple of locales.
 * `workspaceInStatusBar.clickCommand`: what command to execute when the status bar label is clicked
 
+To have a custom piece of text in the status bar, use:
+
+* `workspaceInStatusBar.textInStatusBar`: Text instead of the actual workspace name. Specify this option is the workspace settings JSON file to override the status bar label. To spice up the text, you can use [Unicode emojis](https://unicode.org/emoji/charts/full-emoji-list.html) as well as [VSCode built in icons](https://code.visualstudio.com/api/references/icons-in-labels).
+
 To set the color of the label, use:
 
 * `workspaceInStatusBar.text`

@@ -2,7 +2,7 @@
 	"name": "workspace-in-status-bar",
 	"displayName": "Workspace Name in Status Bar",
 	"description": "Display workspace name in the statusbar",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"publisher": "koalamer",
 	"icon": "images/ws-in-sb-logo.png",
 	"repository": {
@@ -68,6 +68,11 @@
 					"type": "string",
 					"default": "workspaceInStatusBar.click",
 					"description": "Command fired when clicking the status bar label."
+				},
+				"workspaceInStatusBar.textInStatusBar": {
+					"type": "string",
+					"default": "",
+					"description": "Text instead of the actual workspace name."
 				}
 			}
 		},

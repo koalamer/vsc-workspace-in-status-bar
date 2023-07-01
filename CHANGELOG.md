@@ -4,6 +4,10 @@ All notable changes to the "status-bar-workspace-name" extension will be documen
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.1.2] - 2023-07-01
+
+- Add status bar text override option
+
 ## [1.1.1] - 2023-04-09
 
 - Removing "workspace" string from workspace name for some more locales (patch by misaki-web)

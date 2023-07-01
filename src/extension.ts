@@ -92,6 +92,14 @@ function updateLabelProperties() {
 		}
 	}
 
+	// Workspace name override hack
+	if (config.has("textInStatusBar")) {
+		let textOverride: string = config.get("textInStatusBar") || "";
+		if (textOverride.trim() !== "") {
+			text = textOverride;
+		}
+	}
+
 	if (typeof statusBarWorkspaceLabel !== "undefined") {
 		statusBarWorkspaceLabel.hide();
 		statusBarWorkspaceLabel.dispose();
